@@ -1,0 +1,32 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+        "no-var": "error",
+        // 注释前空格
+        "spaced-comment": [
+            "error",
+            "always"
+        ],
+        // 禁止修改 const 声明的变量
+        "no-const-assign": 2,
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error"
+    },
+    "env": {
+        "es6": true,
+        "node": true
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "apps": [
+    {
+      "name": "webhook-server",
+      "script": "index.js",
+      "cwd": "./",
+      "watch": true,
+      "ignore_watch": [
+        "logs",
+        "package.json",
+        "yarn.lock"
+      ],
+      "env": {
+        "server_port": 16080
+      },
+      "error_file": "./logs/err.log",
+      "merge_logs": true,
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}
