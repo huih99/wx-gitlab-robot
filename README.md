@@ -2,7 +2,7 @@
  * @Author: TanHui
  * @Date: 2021-04-08 13:26:25
  * @LastEditors: TanHui
- * @LastEditTime: 2021-06-24 11:21:46
+ * @LastEditTime: 2022-10-26 14:28:52
  * @Description:
 -->
 
@@ -21,7 +21,6 @@
 
 ![MR消息提醒](examples/MR-notice.png)
 
-这套机制已在本人项目中取得了不错的效果，所以决定分享出来。
 
 目前支持以下gitlab事件的webhook
 
@@ -71,6 +70,10 @@ Secret Token: **gitlab-webhook**, 给项目中添加webhook时，需要填写的
 
   ![CR完成时](examples/with-mr-complete.png)
 
+### pipeline
+
+支持pipeline事件的提醒。当pipeline运行成功后提醒。
+
 ### 定时任务
 
 制订了一个定时任务，用于非周末的每一天查询所有项目是否还有未处理的`Merge Request`，将向对应项目的机器人发送一条待办事项的通知
@@ -99,12 +102,13 @@ token 配置在 `src/appConfig.ts`中，请在此替换您的token。
 
 ```js
 module.exports =module.exports = {
-  //  projectName
+  //  gitlab projectName
   "project name": {
     id: "<project id>", // gitlab project id
     key: "<your robot key>" // 企业微信机器人key
   }
 ```
+![gitlab-project](./examples/gitlab-project.png)
 
 ### 如何在发送消息时@企业微信用户
 
