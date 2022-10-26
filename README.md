@@ -2,11 +2,13 @@
  * @Author: TanHui
  * @Date: 2021-04-08 13:26:25
  * @LastEditors: TanHui
- * @LastEditTime: 2022-10-26 14:28:52
+ * @LastEditTime: 2022-10-26 14:43:52
  * @Description:
 -->
 
 # wx-gitlab-robot
+
+[![OSCS Status](https://www.oscs1024.com/platform/badge/huih99/wx-gitlab-robot.svg?size=small)](https://www.oscs1024.com/project/huih99/wx-gitlab-robot?ref=badge_small)
 
 让gitlab事件直接在企业微信中发起提醒，替代传统的邮件提醒，达到更好的消息送达率。
 
